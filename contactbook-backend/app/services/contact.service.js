@@ -31,6 +31,7 @@ class ContactService {
     const cursor = await this.Contact.find(filter);
     return await cursor.toArray();
   }
+
   async findByName(name) {
     return await this.find({
       name: { $regex: new RegExp(name), $options: "i" },
