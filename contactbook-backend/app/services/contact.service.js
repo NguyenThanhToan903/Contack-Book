@@ -33,9 +33,10 @@ class ContactService {
   }
 
   async findByName(name) {
-    return await this.find({
-      name: { $regex: new RegExp(name), $options: "i" },
-    });
+    const query = {
+      name: { $regex: new RegExp(name, "/i") }, // Sử dụng biểu thức chính quy không phân biệt chữ hoa chữ thường
+    };
+    return await this.find(query);
   }
 
   async findById(id) {
