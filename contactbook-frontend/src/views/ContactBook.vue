@@ -73,7 +73,7 @@ export default {
   },
   watch: {
     searchText() {
-      this.activeIndex = -11;
+      this.activeIndex = -1;
     },
   },
   computed: {
@@ -149,4 +149,3 @@ export default {
   text-align: left;
 }
 </style>
-../services/contact.service
