@@ -101,10 +101,6 @@ export default {
     },
   },
   methods: {
-    // submitSearch(normalizedSearchText) {
-    //   this.searchText = normalizedSearchText; // Cập nhật searchText với dữ liệu đã được chuẩn hóa
-    // },
-
     async retrieveContacts() {
       try {
         this.contacts = await ContactService.getAll();
